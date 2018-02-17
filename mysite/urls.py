@@ -9,4 +9,7 @@ urlpatterns = [
     url(r'^books/create/$', views.book_create, name='book_create'),
     url(r'^books/(?P<pk>\d+)/update/$', views.book_update, name='book_update'),
     url(r'^books/(?P<pk>\d+)/delete/$', views.book_delete, name='book_delete'),
+
+    url(r'^list/$', views.get_book_list, name='book_items'),
+    url(r'^items/$', views.get_list_book, name='book_elements'),
 ]

@@ -1,15 +1,59 @@
+import json
 from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse
 from django.template.loader import render_to_string
+from django.core import serializers
 
 from .models import Book
 from .forms import BookForm
 
-
+# Rest framework
+from rest_framework import status
+from rest_framework.views import APIView
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.generics import GenericAPIView
+        
+# simple html render with data
 def book_list(request):
     books = Book.objects.all()
     return render(request, 'books/book_list.html', {'books': books})
 
+# simple json reponse
+def get_book_list(request):
+    data = {}
+    data['items'] = [1, 2, 3]
+    data['title'] = 'books'
+    return JsonResponse(data)
+
+
+# get endpoint with rest framework
+@api_view(['GET'])
+def get_list_book(request):
+    status = 200
+
+    books = Book.objects.all()
+    
+    data = {
+        'items': 'elements sample',
+        'elements': [1, 2, 3, 4],
+        'person': {
+            'name': 'joel',
+            'age': 21
+        },
+        'el': [
+            {
+                'title': 'sample1',
+                'date': '2201'
+            },
+            {
+                'title': 'sample2',
+                'date': '1998'
+            }
+        ],
+        'ha': json(books)
+    }
+    return Response(data, status=status)
 
 def save_book_form(request, form, template_name):
     data = dict()

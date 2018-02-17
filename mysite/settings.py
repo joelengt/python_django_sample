@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     'mysite.books',
 
     'geoposition',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -94,12 +96,12 @@ pymysql.install_as_MySQLdb()
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'django_boilerplate_db',
         'HOST': 'localhost',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': '',
+        'PORT': '4002',
+        'USER': 'postgres',
+        'PASSWORD': 'kuroyukihime2110',
     }
 }
 

@@ -1,0 +1,21 @@
+{
+    "DB_NAME_LOCAL": "django_boilerplate_db",
+    "DB_USER_LOCAL": "postgres",
+    "DB_PASSWORD_LOCAL": "cokuroyukihime2110de",
+    "DB_HOST_LOCAL": "localhost",
+    "DB_PORT_LOCAL": "4002",
+
+    "URL_SITE": "http://vultec.paway.pe",
+
+    "SECRET_KEY": "508+wy2dey5qztf6lq@kkkx3+1h8bupw%h*zi4hv(6*x5eqrie",
+
+    "DB_NAME_STAGING": "sample_staging",
+    "DB_USER_STAGING": "sample_staging",
+    "DB_PASSWORD_STAGING": "sample_staging_team",
+    "DB_HOST_STAGING": "dasdasdasdsadus-west-2.rds.amazonaws.com",
+    "DB_PORT_STAGING": "5432",
+    "AWS_STORAGE_BUCKET_NAME": "s3.dasdasdasd.pe",
+
+    "AWS_ACCESS_KEY_ID" : "AKIAI37HTQCHXV7X4C3A",
+    "AWS_SECRET_ACCESS_KEY" : "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"
+}
